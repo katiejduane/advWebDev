@@ -9,6 +9,7 @@ let obj = {firstName: "Unicorn", lastName: "Smith"}
 // New data is not created, only a copy of the reference:
 let referenceCopy = obj;
 
+
 function multiply(x, y) {
     return x * y;
 }
