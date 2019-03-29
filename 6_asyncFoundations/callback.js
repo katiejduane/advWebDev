@@ -1,3 +1,13 @@
+// a callback function is... 
+// a function that is passed into another function as a parameter
+// then invoked by that other function
+
+// a higher order function is...
+// a function that accepts a callback function as a parameter
+
+// what are callbacks used for?
+// advanced array methods, broswer events, AJAX requests, React Development
+
 function callback() {
     console.log("Coming from callback");
 }
@@ -8,7 +18,7 @@ function higherOrder(fn) {
     console.log("Callback has been invoked");
 }
 
-higherOrder(callback);
+// higherOrder(callback);
 
 //
 
@@ -26,7 +36,7 @@ function sendMessageConfirm(message) {
 
 sendMessageAlert("Lots of duplication");
 
-//
+// how can the above functions be refactored to use callbacks and be less redundant?
 
 function sendMessage(message, callback) {
     return callback(message);
@@ -52,7 +62,7 @@ function upperCaseName(name) {
 
 greet("Tim", upperCaseName);
 
-//
+// though, callback functions are often anonymous, not declared, see below, and compare to above:
 
 function greet(name, formatter) {
     return "Hello, " + formatter(name);
