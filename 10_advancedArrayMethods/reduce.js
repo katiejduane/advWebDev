@@ -30,12 +30,82 @@ console.log(names.reduce(function(accumulator, nextVal){
     return accumulator += ' ' + nextVal
 }, 'The instructors are'));
 
-var arr = [5,4,1,4,5];
-console.log(arr.reduce(function(accumulator, nextVal){
+var numArr = [5,4,1,4,5];
+numArr.reduce(function(accumulator, nextVal){
     if(nextVal in accumulator){
         accumulator[nextVal]++;
     }else{
         accumulator[nextVal] = 1
     }
     return accumulator;
-}, {}));
+}, {});
+
+function sumOddNums(arr){
+    return arr.reduce(function(accumulator, nextVal){
+        if(nextVal % 2 !== 0){
+            accumulator += nextVal;
+        }
+        return accumulator
+    }, 0);
+}
+// console.log(sumOddNums([1,2,3,4,5]))
+
+let sisters = [{ first: 'kathryn', middle: 'jonina', last: 'duane' }, { first: 'hannah', middle: 'louise', last: 'duane' }, {first: 'ellen', middle: 'elizabeth', last: 'duane'} ]
+function createFullName(arr){
+    return arr.reduce(function(accumulator, nextVal){
+        accumulator.push(nextVal.first + " " + nextVal.middle + " " + nextVal.last);
+        return accumulator;
+    }, []);
+}
+// console.log(createFullName(sisters))
+
+
+//exercises!
+function extractValue(arr, key){
+    return arr.reduce(function(accumulator, nextVal){
+        accumulator.push(nextVal[key]);
+        return accumulator;
+    }, []);
+}
+// console.log(extractValue(sisters, 'first'))
+
+function vowelCount(str){
+    let vowels = 'aeiou';
+    return str.split('').reduce(function(acc, next){
+        if(vowels.indexOf(next.toLowerCase()) !== -1){
+            if(next in acc){
+                acc[next]++
+            }else{
+                acc[next] = 1;
+            }
+        }
+        return acc;
+    }, {})
+}
+
+function addKeyAndValue(arr, key, value) {
+    return arr.reduce(function (acc, next, index) {
+        acc[index][key] = value;
+        return acc;
+    }, arr)
+}
+
+// console.log(addKeyAndValue(sisters, 'related', true))
+
+function partition(arr, cb){
+    return arr.reduce(function(acc, next){
+        if(cb(next)){
+            acc[0].push(next);
+        }else{
+            acc[1].push(next)
+        }
+        return acc;
+    },[[],[]])
+}
+
+function isEven(val){
+    return val % 2 === 0;
+}
+
+let numArray = [11,12,13,14]
+console.log(partition(numArray, isEven))
