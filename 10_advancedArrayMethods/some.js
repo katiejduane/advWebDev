@@ -31,3 +31,19 @@ function hasComma(str){
     });
 }
 // console.log(hasComma('oh, hello there!'))
+
+//exercises
+
+function hasOdds(arr){
+    return arr.some(function(num){
+        return num % 2 !== 0;
+    });
+}
+
+function hasZero(num){
+    return num.toString().split('').some(function(val){
+        return val == 0;
+    });
+}
+
+console.log(hasZero(122908))
