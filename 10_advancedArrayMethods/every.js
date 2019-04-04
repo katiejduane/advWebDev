@@ -33,3 +33,35 @@ allLower('hello') //true
 function allArrays(arr){
     return arr.every(Array.isArray)
 }
+
+//exercises
+function hasOnlyOdds(arr){
+    return arr.every(function(num){
+        return num % 2 !== 0;
+    });
+}
+// console.log(hasOnlyOdds([1,2,3,4]))
+
+function hasNoDuplicates(arr){
+    return arr.every(function(val){
+        return arr.indexOf(val) === arr.lastIndexOf(val)
+    });
+}
+
+let bookArr = [{ title: 'ordinary people', fave: true, own: true }, { title: 'jitterbug perfume', fave: true, own: true },
+{ title: 'jurassic park', fave: false, own: false}]
+
+function hasCertainKey(arr, key){
+    return arr.every(function(value){
+        return key in value;
+    })
+}
+// console.log(hasCertainKey(bookArr, 'own'))
+
+function hasCertainValue(arr, key, searchValue){
+    return arr.every(function(val){
+        return val[key] === searchValue;
+    })
+}
+
+console.log(hasCertainValue(bookArr, 'fave', true))
