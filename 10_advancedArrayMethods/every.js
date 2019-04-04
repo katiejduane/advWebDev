@@ -63,5 +63,4 @@ function hasCertainValue(arr, key, searchValue){
         return val[key] === searchValue;
     })
 }
-
 console.log(hasCertainValue(bookArr, 'fave', true))
