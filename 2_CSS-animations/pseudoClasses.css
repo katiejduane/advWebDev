@@ -1,0 +1,79 @@
+/* Pseudo Classes: 
+we're going to learn mostly about 'hover', 'focus', and 'active'
+
+:hover is exactly what it sounds like
+
+:focus is triggered when an element receives 'focus' (click, keyed, tabbed, touched)
+
+:active is triggered when an element is being "activated but the user" which means...
+the button is being clicked ON, and 'active' is only visible when you're still clicking
+or holding down on the click. it does not only apply to buttons.
+
+*/
+
+/* h1:hover{
+    background-color: pink;
+}
+
+button:hover{
+    color: aquamarine;
+}
+
+button:focus{
+    border-radius: 10px;
+    background-color: lightgreen;
+}
+
+button:active{
+    background-color: orange;
+    font-size: 15px;
+}
+
+input:focus{
+    background-color: teal;
+}
+
+p:active{
+    color: blue;
+} */
+
+
+/* building an animated button! -------------------------------------------------> */
+body {
+    background-color: #fcd04b;
+    font-family: Lato;
+    color: white;
+}
+
+h1{
+    text-align: center;
+    font-weight: 300;
+}
+
+.btn{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    background-color: #fcad26;
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 25px 80px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 6px #efa424;
+}
+
+.btn:hover{
+    box-shadow: 0 4px #efa424;
+    top: 2px;
+}
+
+.btn:active{
+    box-shadow: none;
+    top: 6px;
+}
