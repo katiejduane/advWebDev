@@ -1,0 +1,20 @@
+/* SCALE! 
+Altering the size of an element!
+
+*/
+
+p{
+    width: 50px;
+    height: 50px;
+    background-color: #1abc9c;
+    color: #ecf0f1;
+    border: 2px solid #2c3e50;
+}
+
+.transformed{
+    background-color: #3498db;
+    /* transform: scale(2); scales equally along the X and Y axis */
+    transform: scale(2, 5); /* scales differently along the X and Y axis */
+    /* transform: scaleX(2); scales only along the X axis
+    transform: scaleY(2); scales only along the Y axis */
+}
