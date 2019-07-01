@@ -8,6 +8,8 @@ p {
 
 .transformed {
   background-color: #9b59b6;
-  transform: rotate(90deg);
-  transform-origin: top left;
+  transform: rotate(45deg);
+  transform-origin: center;
+  /* if you want to apply more than one transformation, you must assign them to a SINGLE
+  transform css rule */
 }

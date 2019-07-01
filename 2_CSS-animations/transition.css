@@ -1,0 +1,112 @@
+/* There are 4 transition properties we can control! 
+    1. transition-duration (how many seconds, etc)
+    2. transition-property (what are we changing? color, rotation, size, etc)
+    3. transition-timing-function (linear, or 90% very quickly and the last 10% very slowly, etc)
+    4. transition-delay (how long till the transition starts after triggered)
+*/
+
+
+/* .box {
+  background: #9b59b6;
+  height: 200px;
+  width: 200px;
+  line-height:200px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+.animated {
+  transition-property: background;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+}
+
+.box:hover {
+  background: #e74c3c;
+}
+
+.crazy {
+  transition: transform 3s 1s, background 1s 1s;
+}
+
+.crazy:hover {
+  transform: rotate(720deg) scale(0.5);
+  background: #e67e22;
+  border-radius: 100px;
+}
+ */
+
+
+ /* .box {
+  background: #9b59b6;
+  height: 100px;
+  width: 100px;
+  line-height:100px;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  border-radius: 20px;
+}
+
+.animated {
+  transition-property: transform, background, border-radius, transform-origin;
+  /* ^^ or you can specifiy which! */
+  /* transition-duration: 3s, 2s, 2s; */
+  /* the order matters here if there is more than one value, they correspond with the items
+  too be transitioned */
+/* } */
+
+/* .box:hover {
+  background: #e74c3c;
+  transform-origin: bottom right;
+  transform:scale(2) rotate(45deg);
+  border-radius: 50px;
+} */
+
+/* .box {
+  background: #9b59b6;
+  height: 100px;
+  width: 100px;
+  line-height:100px;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  border-radius: 20px;
+}
+
+.animated{
+  transition-property: transform;
+  transition-duration: 2s;
+  transition-timing-function: cubic-bezier(0.050, 0.005, 0.000, 0.870); 
+  /* also: ease-in, ease-out, ease, linear... */
+/* }
+
+.box:hover {
+  transform: translateX(300px);
+  background-color: teal;
+}
+ */
+
+/* # ============================ TRANSITION SHORTHAND! ========================= # */
+
+.box {
+  background: #9b59b6;
+  height: 100px;
+  width: 100px;
+  line-height:100px;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  border-radius: 20px;
+}
+
+.animated{
+  transition: transform 2s ease-out 1s, background-color 0.5s linear;
+  /* ^ what is being transition, the length of the transition, timing function, delay if needed */
+}
+
+.box:hover {
+  transform: translateX(300px);
+  background-color: teal;
+}
