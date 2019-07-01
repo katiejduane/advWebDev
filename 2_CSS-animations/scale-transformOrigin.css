@@ -13,8 +13,12 @@ p{
 
 .transformed{
     background-color: #3498db;
-    /* transform: scale(2); scales equally along the X and Y axis */
-    transform: scale(2, 5); /* scales differently along the X and Y axis */
+    transform: scale(2); /* scales equally along the X and Y axis */
+    /* transform: scale(4,2); scales differently along the X and Y axis */
     /* transform: scaleX(2); scales only along the X axis
     transform: scaleY(2); scales only along the Y axis */
+    /* transform-origin: 0 0; makes the origin of the transformation top(0) left(0) */
+    /* transform-origin: left; /* left from center */
+    /* transform-origin: left bottom; left from bottom */
+    /* center, right, top, and other numerical values also work! */
 }
