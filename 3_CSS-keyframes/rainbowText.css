@@ -1,0 +1,33 @@
+@keyframes rainbowText{
+    0% {
+        color: red;
+        font-size: 20px;
+    }
+    20% {
+        color: orange;
+    }
+    40% {
+        color: yellow;
+    }
+    60% {
+        color: green;
+        font-size: 40px;
+        transform: translateX(200px);
+    }
+    80% {
+        color: blue;
+    }
+    100% {
+        color: purple;
+        font-size: 20px;
+    }
+}
+
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation-name: rainbowText;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
